@@ -17,8 +17,8 @@ async fn main() -> Result<(), Box<dyn Error>>{
     let client = mongodb::Client::with_options(options)?;
 
     println!("Databases:");
-    for name in client.list_database_names(None, None).await? {
-        println!(" - {:?}", name);
+    for documents in client.list_databases(None, None).await? {
+        println!(" - {:?}", documents);
     }
 
     Ok(())
