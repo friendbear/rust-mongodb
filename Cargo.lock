@@ -1186,6 +1186,7 @@ dependencies = [
  "chrono",
  "mongodb",
  "serde",
+ "serde_json",
  "trust-dns-resolver",
 ]
 
