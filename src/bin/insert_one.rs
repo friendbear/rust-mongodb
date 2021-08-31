@@ -3,6 +3,7 @@ use mongodb::options::ClientOptions;
 use std::env;
 use serde::{Deserialize, Serialize};
 use std::error::Error;
+use chrono::prelude::*;
 // use tokio;
 use trust_dns_resolver::config::*;
 
@@ -32,7 +33,8 @@ async fn main() -> Result<(), Box<dyn Error>>{
         doc! {
             "email": "sachiko.sato@sample.co.jp",
             "password": "P@ssword",
-            "name": "佐藤 幸子"
+            "name": "佐藤 幸子",
+            "joind": Utc::now()
         }, None).await?;
     
     println!("Insert: {:?}", insert_result);
