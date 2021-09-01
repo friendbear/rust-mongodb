@@ -39,6 +39,16 @@ async fn main() -> Result<(), Box<dyn Error>>{
     
     println!("Insert: {:?}", insert_result);
 
+    let update_result =  coll.update_one(
+        doc!{
+            "email": "sachiko.sato@sample.co.jp",
+        },
+        doc!{
+             "$set": {"password": "qwerty"},
+        }, None).await?;
+
+    println!("update: {:?}", update_result);
+
     let find_result = coll.find_one(
         doc!{
             "email": "sachiko.sato@sample.co.jp",
