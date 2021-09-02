@@ -1,0 +1,17 @@
+[0m2021.09.01 16:31:41 INFO  Started: Metals version 0.10.5 in workspace '/Users/k22/Develop/Rust/rust-mongodb' for client Visual Studio Code 1.59.1.[0m
+[0m2021.09.01 16:31:49 INFO  time: initialize in 7.91s[0m
+[0m2021.09.01 16:31:50 WARN  Build server is not auto-connectable.[0m
+[0m2021.09.01 16:31:50 WARN  no build tool detected in workspace '/Users/k22/Develop/Rust/rust-mongodb'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+[0m2021.09.01 16:40:17 INFO  shutting down Metals[0m
+[0m2021.09.01 16:42:25 INFO  Started: Metals version 0.10.5 in workspace '/Users/k22/Develop/Rust/rust-mongodb' for client Visual Studio Code 1.59.1.[0m
+[0m2021.09.01 16:42:30 INFO  time: initialize in 5.47s[0m
+[0m2021.09.01 16:42:32 WARN  Build server is not auto-connectable.[0m
+[0m2021.09.01 16:42:32 WARN  no build tool detected in workspace '/Users/k22/Develop/Rust/rust-mongodb'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+[0m2021.09.01 16:45:29 INFO  shutting down Metals[0m
+[0m2021.09.02 03:49:43 INFO  Started: Metals version 0.10.5 in workspace '/Users/k22/Develop/Rust/rust-mongodb' for client Visual Studio Code 1.59.1.[0m
+[0m2021.09.02 03:49:46 INFO  time: initialize in 2.88s[0m
+[0m2021.09.02 03:49:46 WARN  Build server is not auto-connectable.[0m
+[0m2021.09.02 03:49:46 WARN  no build tool detected in workspace '/Users/k22/Develop/Rust/rust-mongodb'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+Sep 02, 2021 1:14:09 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+[0m2021.09.02 14:06:42 INFO  shutting down Metals[0m
