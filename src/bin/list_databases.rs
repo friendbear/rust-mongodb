@@ -1,12 +1,12 @@
 use mongodb::bson::{self, doc, Bson};
 use mongodb::options::ClientOptions;
+use mongodb::options::ResolverConfig;
 use std::env;
 use std::error::Error;
-// use tokio;
-use trust_dns_resolver::config::*;
+use tokio;
 
 
-#[async_std::main]
+#[tokio::main]
 async fn main() -> Result<(), Box<dyn Error>>{
 
     let client_url =
