@@ -7,6 +7,7 @@ use std::env;
 use std::error::Error;
 use serde::{Deserialize, Serialize};
 use tokio;
+use tokio_stream::StreamExt;
 
 #[derive(Debug, Serialize, Deserialize)]
 struct Book {
@@ -29,7 +30,7 @@ async fn main() -> Result<(), Box<dyn Error>>{
     let client = mongodb::Client::with_options(options)?;
 
     //let books = client.database("booklog").collection_with_type::<Book>("books");
-    let mut books = client.database("booklog").collection("books");
+    let books = client.database("booklog").collection("books");
 
     let count = books.count_documents(
         doc!{
@@ -40,18 +41,15 @@ async fn main() -> Result<(), Box<dyn Error>>{
 
     println!("books stored: {:?}", count);
 
-    let options = FindOptions::builder().sort({
+    let mut result  = books.find(
+        None,
+        FindOptions::builder().sort({
             doc!{
                 "launch": -1
             }
-        }
-    ).build();
-    let mut result  = books.find(
-        None,
-        None,
+        }).build()
     ).await?;
 
-    println!("{:?}", &result);
     while let Some(doc) = result.next().await {
         println!("{:?}", doc?);
     }

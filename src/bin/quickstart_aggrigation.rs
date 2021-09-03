@@ -5,7 +5,7 @@ use std::env;
 use std::error::Error;
 use std::fmt;
 use tokio;
-use tokio::stream::StreamExt;
+use tokio_stream::StreamExt;
 
 #[derive(Deserialize)]
 struct MovieSummary {
