@@ -1150,6 +1150,7 @@ dependencies = [
 name = "rust-mongodb"
 version = "0.1.0"
 dependencies = [
+ "bson",
  "chrono",
  "mongodb",
  "serde",
